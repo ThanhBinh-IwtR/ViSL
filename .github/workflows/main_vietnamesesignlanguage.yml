@@ -40,7 +40,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: python-app
+          python-version: '3.10'
       
       
       - name: Login to Azure
