@@ -24,7 +24,7 @@ jobs:
       - name: Deploy to Azure Web App using Run From Package
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'ViSL'  # Tên ứng dụng của bạn trên Azure Web App
+          app-name: 'VietnameseSignLanguage'  # Tên ứng dụng của bạn trên Azure Web App
           slot-name: 'Production'
           package: './Frontend'  # Đảm bảo thư mục Frontend chứa các file HTML/CSS/JS và PHP của bạn
           enable-ondemand: true  # Sử dụng phương pháp Run From Package
