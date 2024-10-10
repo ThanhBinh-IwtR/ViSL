@@ -31,7 +31,7 @@ jobs:
         with:
           name: deployment
           path: deployment.zip
-            
+          retention-days: 1
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
        
@@ -49,7 +49,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: deployment  
-          python-version: '3.10'
+          # python-version: '3.10'
       
       
       - name: Login to Azure
