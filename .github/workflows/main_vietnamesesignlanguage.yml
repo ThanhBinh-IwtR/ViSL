@@ -17,10 +17,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # Triển khai các file tĩnh từ thư mục Frontend lên Azure Web App sử dụng Run From Package
+      # Bỏ qua phát hiện nền tảng và xử lý như ứng dụng tĩnh
       - name: Deploy to Azure Web App using Run From Package
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'VietnameseSignLanguage'  # Tên ứng dụng của bạn trên Azure Web App
+          app-name: 'VietnameseSignLanguage'
           slot-name: 'Production'
-          package: './Frontend'  #
+          package: './Frontend'
+          enable-oryx-build: false  # Bỏ qua phát hiện nền tảng
