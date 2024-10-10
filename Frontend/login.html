@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietNam SignLanguage Translate</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="./static/images/favicon64.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="./static/css/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="logovisl">
+        <div class="col-lg-12 col-md-12 col-sm-12 logo">
+            <img src="./static/images/logo/logoknen.png" alt="logo">
+        </div>
+        
+    </div>
+
+    <div class="loginlayout">
+        <!-- <div id="notification" style="display:none; padding: 10px; background-color: lightgreen; text-align: center; color: white;">
+            Hãy kiểm tra email để xác nhận tài khoản.
+        </div> -->
+        <div class="container" id="container">
+            <div class="form-container register-container">
+                <form id="registerForm" onsubmit="handleRegister(event)">
+                    <h1>ĐĂNG KÝ</h1>
+                    <input type="text" id="username" name="username" placeholder="Tên đăng ký" />
+                    <input type="email" id="mail" name="email"  placeholder="Email đăng ký" />
+                    <input type="password" id="pass" name="password"  placeholder="Tạo mật khẩu" />
+                    <button type="submit">XÁC NHẬN</button>
+                    <span>Đăng ký bằng</span>
+                     <div class="social-container">
+                        <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                     </div>
+                </form>
+            </div>
+    
+            <div class="form-container login-container">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <h1>ĐĂNG NHẬP</h1>
+                    <input type="text" id="usernamelogin" name="username" placeholder="Tên đăng nhập" type="text"  />
+                    <input type="password" id="passlogin" name="password" placeholder="Mật khẩu" />
+                    <div class="content">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label >Ghi nhớ</label>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                    <button type="submit">VÀO</button>
+                    <span>Đăng nhập bằng</span>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+            </div>
+        
+    
+    
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1 class="title">Chào <br>bạn</h1>
+                        <p>Chào mừng bạn đã quay trở lại, hãy đăng nhập để vào ViSL</p>
+                        <button class="ghost" id="login">Đăng nhập
+                            <i class="fa-solid fa-arrow-left login"></i>
+                        </button>
+                        
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1 class="title">Bắt đầu<br> khám phá</h1>
+                        <p>Chào mừng bạn đến với ViSL cùng chúng tớ</p>
+                        <button class="ghost" id="register">Đăng ký
+                            <i class="fa-solid fa-arrow-right register"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-box" style="display:none;">
+        <div class="success" style="display:none;">
+            Hãy kiểm tra email để xác nhận tài khoản.
+        </div>
+        <div class="invaliduseremail" style="display:none;">
+            Tên đăng ký và email của bạn đã được sử dụng, vui lòng nhập lại tên mới.
+        </div>
+        <div class="invalidlogin" style="display:none;">
+            Tên đăng nhập hoặc mật khẩu sai, vui lòng kiểm tra lại.
+        </div>
+        <button onclick="closePopup()">Đóng</button>
+    </div>
+    <div id="overlaypopup" style="display:none;"></div>
+    
+    
+    
+
+    <script src="./static/js/login.js"></script>
+    
+</body>
+</html>
