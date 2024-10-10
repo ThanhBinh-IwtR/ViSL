@@ -127,7 +127,7 @@ def get_user_info(request: Request, db: Session = Depends(get_db)):
 #-----------------ModelAI-------------------
 
 model = load_model()
-with open('app/modelAI/sign_to_prediction_index_map.json', 'r', encoding='utf-8') as json_file:
+with open('modelAI/sign_to_prediction_index_map.json', 'r', encoding='utf-8') as json_file:
     label_map = json.load(json_file)
 
 mp_holistic = mp.solutions.holistic

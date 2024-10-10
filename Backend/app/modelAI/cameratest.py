@@ -16,11 +16,11 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 preprocessLayer = Preprocessing()
 # sess = onnxruntime.InferenceSession("output/model.onnx")
 model = M(num_block=3)
-checkpoint = torch.load('app/modelAI//checkpoint_last_seed-1.pth', map_location=torch.device('cpu'))
+checkpoint = torch.load('modelAI//checkpoint_last_seed-1.pth', map_location=torch.device('cpu'))
 model.load_state_dict(checkpoint['model'])
 # model.to('cpu')
 model.eval()
-with open('app/modelAI/sign_to_prediction_index_map.json', 'r', encoding='utf-8') as json_file:
+with open('modelAI/sign_to_prediction_index_map.json', 'r', encoding='utf-8') as json_file:
     label_map = json.load(json_file)
     
 # def predict(input_data, session, label_map=label_map,threshold=0.5):

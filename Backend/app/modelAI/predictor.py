@@ -7,7 +7,7 @@ from .transformer import M
 # Khởi tạo mô hình AI
 def load_model():
     model = M(num_block=3)
-    checkpoint = torch.load('app/modelAI/checkpoint_last_seed-1.pth', map_location=torch.device('cpu'))
+    checkpoint = torch.load('modelAI/checkpoint_last_seed-1.pth', map_location=torch.device('cpu'))
     model.load_state_dict(checkpoint['model'])
     model.eval()
     return model
