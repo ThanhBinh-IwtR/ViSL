@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from model import userModel
+from app.model import userModel
 from database.connection import engine
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -21,7 +21,7 @@ frontend_path = BASE_DIR.parent / "Frontend"
 # Đường dẫn tới thư mục static trong Frontend
 static_path = frontend_path / "static"
 
-app.mount("/static", StaticFiles(directory=frontend_path / "static"), name="static")
+app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
 # config routes
