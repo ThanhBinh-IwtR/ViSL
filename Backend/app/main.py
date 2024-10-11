@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from app.model import userModel
+from model import userModel
 from database.connection import engine
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
