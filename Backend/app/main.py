@@ -13,7 +13,7 @@ userModel.Base.metadata.create_all(bind=engine)
 app=FastAPI()
 
 # Lấy đường dẫn tuyệt đối tới thư mục Backend
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 # Đường dẫn tới thư mục Frontend
 frontend_path = BASE_DIR.parent / "Frontend"
