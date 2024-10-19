@@ -276,15 +276,9 @@
 .working-style-three .video-inner{
   position: relative;
   display: block;
-  padding: 185px 0px;
-  width: 100%;
+  padding: 10px;
   border-radius: 20px;
-  max-width: 850px;
-  margin: 0 auto;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(141deg, #72cf95 25%, #7dace4 75%);
 }
 
 .working-style-three .video-inner .video-btn a{
@@ -380,7 +374,7 @@
 }
 
 .working-style-three .working-block:nth-child(2) .working-block-two .inner-box .icon-box{
-  background: linear-gradient(#FBC2EB, #A18CD1);
+  background: linear-gradient(141deg, #72cf95 25%, #7dace4 75%);
 }
 
 .working-style-three .working-block:nth-child(3) .working-block-two .inner-box .icon-box{

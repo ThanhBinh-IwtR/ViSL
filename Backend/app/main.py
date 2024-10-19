@@ -12,16 +12,10 @@ userModel.Base.metadata.create_all(bind=engine)
 # instance 
 app=FastAPI()
 
-# Lấy đường dẫn tuyệt đối tới thư mục Backend
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+frontend_path = BASE_DIR / "Frontend"
 
-# Đường dẫn tới thư mục Frontend
-frontend_path = BASE_DIR.parent / "Frontend"
-
-# Đường dẫn tới thư mục static trong Frontend
-static_path = frontend_path / "static"
-
-app.mount("/static", StaticFiles(directory=static_path), name="static")
+app.mount("/static", StaticFiles(directory=frontend_path / "static"), name="static")
 
 
 # config routes

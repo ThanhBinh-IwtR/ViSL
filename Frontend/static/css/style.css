@@ -433,6 +433,7 @@ img {
   top: 0px;
   transform: scale(0,0);
   z-index: -1;
+  border-radius: 55px;
   transition: all 500ms ease;
 }
 
@@ -2820,7 +2821,7 @@ button.ltr {
 }
 
 input:checked + .slider {
-  background-color: #73c052;
+  background-color: #73cf95;
 }
 
 input:checked + .slider:before {
@@ -2921,7 +2922,19 @@ input:checked + .slider:before {
   margin-right: 15px;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 
+.gif-image {
+  display: block;
+  border-radius: 15px; 
+  max-width: 100%;
+  height: auto;
+  background-clip: padding-box;
+}
 
 
 
